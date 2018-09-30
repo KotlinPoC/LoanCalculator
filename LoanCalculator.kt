@@ -1,4 +1,3 @@
-package abcbank
 /**
  *  Loan Calculator class, converted from the original Java
  *  
@@ -10,7 +9,7 @@ class LoanCalculator {
   //calculate the monthly payment
   val monthlyPayment:Double
   get() {
-    val monthlyPayment:Double
+    var monthlyPayment:Double
     val monthlyInterestRate:Double
     val numberOfPayments:Int
     if (numberOfYears != 0 && yearlyInterestRate != 0.0)
@@ -47,7 +46,7 @@ class LoanCalculator {
     //calculate the monthly payment
     val monthlyPayment:Double
     get() {
-      val monthlyPayment:Double
+      var monthlyPayment:Double
       val monthlyInterestRate:Double
       val numberOfPayments:Int
       if (numberOfYears != 0 && yearlyInterestRate != 0.0)
@@ -78,12 +77,12 @@ class LoanCalculator {
       this.yearlyInterestRate = yearlyInterestRate
     }
     public override fun toString():String {
-      return (loanAmount + "," + numberOfYears + "," +
-              yearlyInterestRate)
+      return "" + loanAmount + "," + numberOfYears + "," +
+              yearlyInterestRate
     }
   }
   public override fun toString():String {
-    return (loanAmount + "," + numberOfYears + "," +
-            yearlyInterestRate)
+    return ""+loanAmount + "," + numberOfYears + "," +
+            yearlyInterestRate
   }
 }
